@@ -754,7 +754,7 @@ section .title::after{
     flex-direction: row;
 }
 .modal .bottom .text-area .tech-used .list .row .category-name{
-    width: 130px;
+    width: 140px;
     text-align: center;
     padding-right: 5px;
 }
