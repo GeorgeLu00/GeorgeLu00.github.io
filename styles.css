@@ -704,7 +704,7 @@ section .title::after{
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    height: 160px;
+    height: 170px;
 }
 
 .modal .bottom .text-area .title{
@@ -725,6 +725,7 @@ section .title::after{
 
 .modal .bottom .text-area .description .description-text{
     text-align: justify;
+    font-size: 14px;
 }
 
 .modal .bottom .text-area .tech-used{
@@ -745,6 +746,7 @@ section .title::after{
     flex-direction: column;
     justify-content: start;
     text-align: left;
+    font-size: 14px;
 }
 
 .modal .bottom .text-area .tech-used .list .row{
