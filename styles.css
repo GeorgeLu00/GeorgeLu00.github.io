@@ -468,27 +468,6 @@ section .title::after{
     opacity: 1;
     cursor: pointer;
 }
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid rgb(156, 35, 255)!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: rgb(156, 35, 255)!important;
-}
 
 /* contact section styling */
 .contact .contact-content .column{
@@ -591,6 +570,13 @@ section .title::after{
 .right form .button-area button:hover{
   color: rgb(156, 35, 255);
   background: none;
+}
+
+.contact .right form .button-area .email-sent{
+    margin-left: 15px;
+    color: green;
+    font-size: 1.2em;
+    display: none;
 }
 
 /* modal style*/

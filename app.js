@@ -133,3 +133,37 @@ document.getElementsByClassName("next")[0].addEventListener('click', event =>{
 // $(document).click(function(event) {
 //     console.log(event.target)
 // });
+
+emailjs.init("user_ciEPm7BoMDiT6ShgA5Ah1");
+
+document.getElementById("emailButtom").addEventListener('click', event =>{
+    // console.log(validateEmail(document.getElementById("email").value));
+
+    if (validateEmail(document.getElementById("email").value)){
+        var tempParams = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value
+        }
+        // console.log(tempParams);
+        emailjs.send("service_ajxr96c","template_9fujdxh",tempParams)
+        .then(function(res){
+            if (res.status == 200){
+                document.getElementById("emailSent").style.display = "block";
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("subject").value = "";
+                document.getElementById("message").value = "";
+            }
+        })
+    }
+    event.preventDefault();
+})
+
+
+function validateEmail(email){
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email.match(mailformat)) return true;
+    else return false;
+}
