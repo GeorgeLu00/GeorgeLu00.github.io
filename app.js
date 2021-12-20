@@ -50,6 +50,7 @@ $(document).ready(function(){
 });
 
 var descriptionTextArray = ["Dexter Intelligent Desktop","Definitely Not Trello","Age, Gender, and Ethnicity","Credit Card Fraud Detection"];
+var categoryArray = [ "Artificial Intelligence", "Web Development", "Artificial Intelligence", "Data Science"]
 var techUsedTextArray = [
                         [["Frontend","HTML, CSS, Javascript, Electron"],["Backend","Python"],["AI Model","Pytorch"]],
                         [["Frontend","HTML, CSS, Javascript, React, Bootstrap, Jquery"],["Backend","NodeJS, Express"],["Database","MongoDB"],["Web Server","Nginx"],["Hosting","Amazon Web Services"]],
@@ -166,4 +167,31 @@ function validateEmail(email){
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (email.match(mailformat)) return true;
     else return false;
+}
+
+// Get the container element
+var btnContainer = document.getElementById("filterButtons");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+var projects = document.getElementById("projects").getElementsByClassName("card");
+
+// console.log(projects[0]);
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("btn active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    active_filter = current[0].innerText;
+
+    for (var j = 0; j<categoryArray.length; j++){
+        if (categoryArray[j] == active_filter || active_filter == "All"){
+            projects[j].style.display = "block"
+        }
+        else{
+            projects[j].style.display = "none"
+        }
+    }
+  });
 }
