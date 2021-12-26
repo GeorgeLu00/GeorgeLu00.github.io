@@ -67,29 +67,21 @@ var activeProject;
 var activeImageIndex;
 var gallary;
 
-// Open the Modal
+// handle opening model
 Array.from(document.getElementsByClassName("projects")[0].getElementsByClassName("text-over-image")).forEach((item,index) => {
     item.addEventListener('click', event =>{
         activeProject = index;
         activeImageIndex = 0;
         document.getElementById("techList").innerHTML = "";
-        // document.getElementById("gallaryImageContainer").innerHTML = "";
-        // for (var i = 0; i<imageFolderLength[index];i++){
-        //     // console.log(index,i);
-        //     document.getElementById("gallaryImageContainer").innerHTML += '<img src="'+ "images/project/" + imageFolderPath[index] + "/" + i +".jpg" +'" alt="" class="hidden">';
-        //     // console.log('<img src="'+ "images/project/" + imageFolderPath[index] + "/" + i +".jpg" +'" alt="">');
-        // }
         for (var i = 0; i<techUsedTextArray[index].length;i++){
             document.getElementById("techList").innerHTML += '<div class="row"><div class="category-name">' + techUsedTextArray[index][i][0] +':</div><div class="category-list">' + techUsedTextArray[index][i][1]+'</div></div>'
         }
         document.getElementById("descriptionText").innerText = descriptionTextArray[index];
         document.getElementById("myModal").style.display = "block";
-        // gallary = document.getElementsByClassName("hidden");
-        // gallary[0].classList = "active";
-        
     })
 });
 
+// handle closing model
 [document.getElementById("myModal") , document.getElementById("closeIcon")].forEach(item => {
     item.addEventListener('click', event =>{
         if (event.target.id == "myModal" || event.target.id == "closeIcon"){
@@ -98,6 +90,7 @@ Array.from(document.getElementsByClassName("projects")[0].getElementsByClassName
     })
 });
 
+// handle previous image
 document.getElementsByClassName("prev")[0].addEventListener('click', event =>{
     activeImageIndex--;
     if (activeImageIndex < 0){
@@ -106,6 +99,8 @@ document.getElementsByClassName("prev")[0].addEventListener('click', event =>{
     document.getElementById("gallaryImage").src= "images/project/" + imageFolderPath[activeProject] + "/" + activeImageIndex +".jpg";
     console.log(activeImageIndex);
 })
+
+// handle next image
 document.getElementsByClassName("next")[0].addEventListener('click', event =>{
     activeImageIndex++;
     if (activeImageIndex >= imageFolderLength[activeProject]){
@@ -115,31 +110,8 @@ document.getElementsByClassName("next")[0].addEventListener('click', event =>{
     console.log(activeImageIndex);
 })
 
-
-
-// function plusSlides(index){
-//     document.getElementById("gallaryImage").src="images/banner.jpg"
-// }
-
-// .forEach(item => {
-//     item.addEventListener('click', event =>{
-//         document.getElementById("myModal").style.display = "none";
-//     })
-// });
-// Close the Modal
-// function closeModal() {
-//     var id = window.event.target.id;
-//     if (id == "myModal" || id == "closeIcon"){
-//         document.getElementById("myModal").style.display = "none";
-//     }
-// }
-
-// $(document).click(function(event) {
-//     console.log(event.target)
-// });
-
+// handle contact email
 emailjs.init("user_ciEPm7BoMDiT6ShgA5Ah1");
-
 document.getElementById("emailButtom").addEventListener('click', event =>{
     // console.log(validateEmail(document.getElementById("email").value));
 
@@ -179,8 +151,7 @@ var btnContainer = document.getElementById("filterButtons");
 var btns = btnContainer.getElementsByClassName("btn");
 var projects = document.getElementById("projects").getElementsByClassName("card");
 
-// console.log(projects[0]);
-// Loop through the buttons and add the active class to the current/clicked button
+// Filter Projects based on active class
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("btn active");
