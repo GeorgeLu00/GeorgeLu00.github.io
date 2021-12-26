@@ -60,7 +60,13 @@ var techUsedTextArray = [
                         [["AI Model","Pytorch"]],
                         [["Data Analysis","Python"],["Machine Learning","Scikit-Learn"],["Data Visualization","Matplotlib"]]
                         ];
-
+var website_links = [
+    ["","youtube.com/dexter",""],
+    ["dnt.com","youtube.com/dnt","github.com/dnt"],
+    ["","youtube.com/age","github.com/age"],
+    ["","youtube.com/fraud","github.com/fraud"]
+]
+var website_name = ["Website","Video Demo","Code"]
 var imageFolderPath = ["dexter","dnt","age","fraud"];
 var imageFolderLength = [4,3,4,5];
 var activeProject;
@@ -72,9 +78,28 @@ Array.from(document.getElementsByClassName("projects")[0].getElementsByClassName
     item.addEventListener('click', event =>{
         activeProject = index;
         activeImageIndex = 0;
-        document.getElementById("techList").innerHTML = "";
+        const techList = document.getElementById("techList");
+        const links = document.getElementById("links");
+        techList.innerHTML = "";
+        links.innerHTML = "";
         for (var i = 0; i<techUsedTextArray[index].length;i++){
-            document.getElementById("techList").innerHTML += '<div class="row"><div class="category-name">' + techUsedTextArray[index][i][0] +':</div><div class="category-list">' + techUsedTextArray[index][i][1]+'</div></div>'
+            techList.innerHTML += 
+            `<div class="row">
+                <div class="category-name">
+                    ${techUsedTextArray[index][i][0]}:
+                </div>
+                <div class="category-list">
+                    ${techUsedTextArray[index][i][1]}
+                </div>
+            </div>`;
+        }
+        for (var i = 0; i < 3; i++){
+            if (website_links[index][i] != ""){
+                links.innerHTML += 
+                ` 
+                    <a class="link" href="https://${website_links[index][i]}" target="_blank">${website_name[i]}</a>
+                `
+            }
         }
         document.getElementById("descriptionText").innerText = descriptionTextArray[index];
         document.getElementById("myModal").style.display = "block";

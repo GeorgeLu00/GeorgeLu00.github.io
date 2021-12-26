@@ -508,11 +508,17 @@ section .title::after{
     font-weight: 600;
     margin-bottom: 10px;
 }
+.contact .contact-content .left .text{
+    margin-top: 10px;
+}
 .contact .contact-content .left p{
     text-align: justify;
 }
 .contact .contact-content .left .icons{
     margin: 10px 0;
+}
+.contact .contact-content .left i:hover{
+    color: rgb(106, 0, 192);
 }
 .contact .contact-content .row{
     display: flex;
@@ -522,12 +528,11 @@ section .title::after{
 .contact .contact-content .row .info{
     margin-left: 30px;
 }
-.contact .contact-content .row .info a:link{
-    color: black;
-}
+.contact .contact-content .row .info a:link,
 .contact .contact-content .row .info a:visited{
     color: black;
 }
+
 .contact .contact-content .row .info a:hover{
     color: rgb(156, 35, 255);
 }
@@ -552,7 +557,7 @@ section .title::after{
     margin-bottom: 15px;
 }
 .contact .right form .textarea{
-    height: 80px;
+    height: 100px;
     width: 100%;
 }
 .contact .right form .name{
@@ -777,19 +782,28 @@ section .title::after{
 }
 
 .modal .bottom .links{
-    /* background-color: green; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
     padding: 15px 0px;
+    width: 100%;
 }
 
-/* .modal .bottom .links .link{
-    /* background-color: green; */
-    /* width: 300px;
-/* } */
+.modal .bottom .links .link{
+    width: 300px;
+}
+
+.modal .bottom .links .link:link,
+.modal .bottom .links .link:visited,
+.modal .bottom .links .link:active{
+    color: white;
+}
+
+.modal .bottom .links .link:hover{
+    color: #999;
+}
 
 /* responsive media query start */
 @media (max-width: 1300px) {
