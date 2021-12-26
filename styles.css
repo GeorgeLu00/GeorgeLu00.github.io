@@ -500,6 +500,10 @@ section .title::after{
 }
 
 /* contact section styling */
+.contact .title{
+    margin-bottom: 30px;
+}
+
 .contact .contact-content .column{
     width: calc(50% - 30px);
 }
@@ -509,7 +513,7 @@ section .title::after{
     margin-bottom: 10px;
 }
 .contact .contact-content .left .text{
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .contact .contact-content .left p{
     text-align: justify;
@@ -557,7 +561,7 @@ section .title::after{
     margin-bottom: 15px;
 }
 .contact .right form .textarea{
-    height: 100px;
+    height: 80px;
     width: 100%;
 }
 .contact .right form .name{
