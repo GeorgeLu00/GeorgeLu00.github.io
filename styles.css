@@ -625,6 +625,7 @@ section .title::after{
 }
 
 .modal .max-width{
+    max-width: 1400px;
     padding: 0px;
 }
 
@@ -735,7 +736,7 @@ section .title::after{
     border-color: rgb(156, 35, 255);
     border-width: 1px;
     border-left: none;
-    width: 50%;
+    width: 60%;
     height: 100%;
 }
 
@@ -752,7 +753,7 @@ section .title::after{
     border-width: 1px;
     border-left: none;
     border-right: none;
-    width: 50%;
+    width: 40%;
     height: 100%;
 }
 
