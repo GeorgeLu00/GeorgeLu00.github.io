@@ -61,10 +61,10 @@ var techUsedTextArray = [
                         [["Data Analysis","Python"],["Machine Learning","Scikit-Learn"],["Data Visualization","Matplotlib"]]
                         ];
 var website_links = [
-    ["","youtube.com/dexter",""],
-    ["dnt.com","youtube.com/dnt","github.com/dnt"],
-    ["","youtube.com/age","github.com/age"],
-    ["","youtube.com/fraud","github.com/fraud"]
+    ["","youtu.be/QzbB6AdVfhw",""],
+    ["","","github.com/GeorgeLuDev/DefinitelyNotTrello"],
+    ["","","github.com/GeorgeLuDev/Predicting-Age-Gender-and-Ethnicity"],
+    ["","","colab.research.google.com/drive/1yTbhfgLgntSTEReLU3uWe9aYWyy3iNNJ?usp=sharing"]
 ]
 var website_name = ["Website","Video Demo","Code"]
 var imageFolderPath = ["dexter","dnt","age","fraud"];
