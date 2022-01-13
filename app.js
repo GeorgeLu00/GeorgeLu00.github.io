@@ -61,7 +61,7 @@ var techUsedTextArray = [
                         [["Data Analysis","Python"],["Machine Learning","Scikit-Learn"],["Data Visualization","Matplotlib"]]
                         ];
 var website_links = [
-    ["","youtu.be/QzbB6AdVfhw",""],
+    ["","youtube.com/watch?v=QzbB6AdVfhw&list=PLQD3YRi5R6cP3HPfPmzogLCH4GMz0YRb5&index=1&ab_channel=NickSpeer",""],
     ["","","github.com/GeorgeLuDev/DefinitelyNotTrello"],
     ["","","github.com/GeorgeLuDev/Predicting-Age-Gender-and-Ethnicity"],
     ["","","colab.research.google.com/drive/1yTbhfgLgntSTEReLU3uWe9aYWyy3iNNJ?usp=sharing"]
